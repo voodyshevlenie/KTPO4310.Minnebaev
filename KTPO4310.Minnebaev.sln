@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTPO4310.Minnebaev.UnitTest", "KTPO4310.Minnebaev.UnitTest\KTPO4310.Minnebaev.UnitTest.csproj", "{D734194E-FFBD-4ADF-8D54-0DA0604347ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48D29921-20AB-4610-9721-0917C0355D15}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KTPO4310.Minnebaev.Lib", "ClassLibrary1KTPO4310.Minnebaev.Lib\KTPO4310.Minnebaev.Lib.csproj", "{7005F26B-546C-4BF9-8284-103F6110E67C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D734194E-FFBD-4ADF-8D54-0DA0604347ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D734194E-FFBD-4ADF-8D54-0DA0604347ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D734194E-FFBD-4ADF-8D54-0DA0604347ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D734194E-FFBD-4ADF-8D54-0DA0604347ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7005F26B-546C-4BF9-8284-103F6110E67C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7005F26B-546C-4BF9-8284-103F6110E67C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7005F26B-546C-4BF9-8284-103F6110E67C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7005F26B-546C-4BF9-8284-103F6110E67C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
