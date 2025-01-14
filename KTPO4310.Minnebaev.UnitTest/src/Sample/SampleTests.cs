@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace KTPO4310.Gainutdinov.UnitTest.src.Sample
+namespace KTPO4310.Minnebaev.UnitTest.src.Sample
 {
     [TestFixture]
     public class SampleTests
