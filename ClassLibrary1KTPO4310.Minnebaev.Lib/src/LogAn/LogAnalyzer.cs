@@ -1,20 +1,15 @@
-﻿using System;
+﻿using KTPO4310.Minnebaev.Lib.src.LogAn;
 
 namespace KTPO4310.Minnebaev.Lib.src.LogAn
 {
+    /// <summary> Анализатор лог. файлов </summary>
     public class LogAnalyzer
     {
-        public bool WasLastFileNameValid { get; private set; }
+        /// <summary> Проверка правильности имени файла</summary>
         public bool IsValidLogFileName(string fileName)
         {
-            if (string.IsNullOrEmpty(fileName))
-            {
-                WasLastFileNameValid = false;
-                return false;
-            }
-
-            WasLastFileNameValid = fileName.EndsWith(".LOG", StringComparison.OrdinalIgnoreCase);
-            return WasLastFileNameValid;
+            IExtensionManager extensionManager = ExtensionManagerFactory.Create();
+            return extensionManager.IsValid(fileName);
         }
     }
 }
