@@ -12,5 +12,4 @@ namespace KTPO4310.Minnebaev.UnitTest.src.Sample
         }
 
     }
-
 }
