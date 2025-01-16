@@ -1,26 +1,37 @@
 ﻿using System;
-using KTPO4310.Minnebaev.Lib.src.LogAn;
 using System.Configuration;
+using System.Linq;
 
 namespace KTPO4310.Minnebaev.Lib.src.LogAn
 {
     /// <summary>Менеджер расширений файлов</summary>
     public class FileExtensionManager : IExtensionManager
     {
-        /// <summary>проверка правильности расширения</summary>
+        private string _validExtensionsString;
 
+        /// <summary>проверка правильности расширения</summary>
         public FileExtensionManager()
         {
-            string configvalue2 = ConfigurationManager.AppSettings["logfilelocation"];
+            _validExtensionsString = ConfigurationManager.AppSettings["logfileextensions"];
+            if (string.IsNullOrEmpty(_validExtensionsString))
+            {
+                _validExtensionsString = ".log"; //Fallback default
+            }
         }
 
         public bool IsValid(string fileName)
         {
-            //читать конфигурационный файл
-            //вернуть true
-            //если конфигурация поддерживается
+            if (string.IsNullOrEmpty(fileName))
+            {
+                return false;
+            }
 
-            throw new NotImplementedException();
+            var validExtensions = _validExtensionsString.Split(',')
+                .Select(ext => ext.Trim())
+                .Where(ext => !string.IsNullOrEmpty(ext))
+                .ToArray();
+
+            return validExtensions.Any(ext => fileName.EndsWith(ext, StringComparison.OrdinalIgnoreCase));
         }
     }
 }
